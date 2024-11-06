@@ -1,0 +1,43 @@
+Task Description
+矩陣翻轉
+
+Input Format
+第一行會有兩個數字，分別為 列(row)小於100 和 行(column)小於100，接著下方就是這個矩陣的內容。
+
+Output Format
+直接輸出翻轉後的矩陣
+每行最後多一個空格
+
+
+#include <stdio.h>
+
+int main()
+{
+    int row, column;
+    
+    scanf("%d %d", &row, &column);
+
+    //輸入
+    int num[row][column];
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            scanf("%d", &num[i][j]);
+        }
+    }
+    
+    
+    //翻轉, 輸出
+    for (int i = 0; i < column; i++)
+    {
+        for (int j = 0; j < row; j++)
+        {
+            printf("%d ", num[j][i]);
+        }
+        if (i != column - 1)
+        printf("\n");
+    }
+
+    return 0;
+}
