@@ -8,6 +8,7 @@ int main()
 
   scanf("%d", &num);
 
+  //將輸入的數字傳進數列numA 
   a1 = num / 10000;
   a2 = (num % 10000) / 1000;
   a3 = (num % 1000) / 100;
@@ -15,8 +16,9 @@ int main()
   a5 = num% 10;
 
   int numA[5] = {a1, a2, a3, a4, a5};
-    
-  for(int i = 0; i < 6; i++)
+  
+  //計算有多少1, 2, 3, 4, 5
+  for(int i = 0; i < 5; i++)
   {
     if (numA[i] == 1)
       one++;
@@ -33,11 +35,27 @@ int main()
   int how_many_num[5] = {one, two, three, four, five};
 
   //how_many_num[a1-1]
-
-  
-  printf("%d%d\n", a1, how_many_num[a1-1]);
     
-  printf("%d%d%d%d%d", one, two, three, four, five);
+  //printf("%d%d%d%d%d\n", one, two, three, four, five);
+  
+  //將重複的數字改為零
+  for (int i = 0; i < 5; i++)
+  {
+      for (int j = i + 1; j < 5; j++)
+      {
+          if (numA[i] == numA[j])
+            numA[j] = 0;
+      }
+  }
+  
+  //輸出
+  for (int i = 0; i < 5; i++)
+  {
+      if (numA[i] != 0)
+        printf("%d%d", how_many_num[(numA[i] - 1)], numA[i]);
+  }
+  
+  
 
   return 0;
 }
