@@ -1,3 +1,9 @@
+Task Description
+Move Zero
+給定一組長度為 n 的正整數陣列 A。將元素值為0的放在 A 的尾端，並依相對順序保留非零元素。最後印出 A 的所有元素值。
+
+
+
 #include <stdio.h>
 
 int main()
