@@ -1,3 +1,10 @@
+Task Description
+重新排列一組數列，依原順序將奇數項排列在前，偶數項排列在後。
+例如，數列 2 1 3 5 6 4 7的奇數項是 2 3 6 7，偶數項是 1 5 4
+將之依原順序重新排列為 2 3 6 7 1 5 4。
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 struct ListNode
